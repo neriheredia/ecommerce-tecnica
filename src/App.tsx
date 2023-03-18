@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const App = () => <StyledView>Hello world</StyledView>;
+const App = () => <StyledView>Hello world!!</StyledView>;
 
 const StyledView = styled.div`
   flex: 1;
