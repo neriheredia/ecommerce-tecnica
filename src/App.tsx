@@ -1,14 +1,8 @@
-import styled from 'styled-components';
+import { FC } from 'react';
+import { Home } from '@/pages';
 
-const App = () => {
-  return <StyledView>Hello world!!</StyledView>;
+const App: FC = () => {
+  return <Home />;
 };
-
-const StyledView = styled.div`
-  align-items: center;
-  background-color: #fff;
-  flex: 1;
-  justify-content: center;
-`;
 
 export default App;
