@@ -5,9 +5,9 @@ const App = () => {
 };
 
 const StyledView = styled.div`
-  flex: 1;
-  background-color: #fff;
   align-items: center;
+  background-color: #fff;
+  flex: 1;
   justify-content: center;
 `;
 
