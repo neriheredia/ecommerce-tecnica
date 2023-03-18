@@ -45,11 +45,6 @@
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{ts,tsx}": [
       "eslint --fix",
@@ -58,6 +53,8 @@
     "src/**/*.{ts,tsx}": [
       "eslint --fix",
       "prettier --write"
-    ]
+    ],
+    "*.js": "eslint --cache --fix",
+    "*.css": "stylelint --fix"
   }
 }
