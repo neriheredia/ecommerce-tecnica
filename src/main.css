@@ -13,3 +13,14 @@
   font-family: 'Montserrat - bold';
   src: url('./settings/fuentes/montserrat/Montserrat-Bold.ttf');
 }
+
+@font-face {
+  font-family: 'nashville';
+  src: url('./settings/fuentes/nashville/NASHVILL.TTF');
+}
+
+.link {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}

@@ -25,6 +25,7 @@ module.exports = {
     'react/function-component-definition': 0,
     '@typescript-eslint/no-use-before-define': 0,
     'import/prefer-default-export': 'off',
-    'import/extensions': ['error', 'never', { json: 'always', svg: 'always' }],
+    'import/no-extraneous-dependencies': 'off',
+    'import/extensions': ['error', 'never', { json: 'always', svg: 'always', png: 'always' }],
   },
 };
