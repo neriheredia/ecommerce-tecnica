@@ -3,7 +3,8 @@ export interface BannerProps {
   className?: string;
   color?: string;
   height?: string;
-  text: string;
+  text?: string;
+  texts?: { link: string; textLink: string }[];
   textsize?: string;
   width?: string;
 }
