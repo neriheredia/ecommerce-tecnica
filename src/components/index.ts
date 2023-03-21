@@ -1,5 +1,7 @@
 export * from './banners';
 export * from './cart';
+export * from './company';
+export * from './iconlink';
 export * from './imagewithsizes';
 export * from './infobox';
 export * from './input';
