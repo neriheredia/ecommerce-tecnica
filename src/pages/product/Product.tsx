@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlexDiv } from '@/style';
-import { Banners, InfoBox, NavBar } from '@/components';
+import { Banners, CompnayInfo, InfoBox, NavBar } from '@/components';
 import { TEXT } from '@/constants';
 
 const { DETAIL_PRODUCT, TECNOLOGIES } = TEXT;
@@ -17,6 +17,7 @@ const Product = () => {
       <NavBar />
       <InfoBox description={DETAIL_PRODUCT.description} title={DETAIL_PRODUCT.title} upperTitle />
       <InfoBox description={TECNOLOGIES.description} title={TECNOLOGIES.title} upperTitle />
+      <CompnayInfo />
     </FlexDiv>
   );
 };
