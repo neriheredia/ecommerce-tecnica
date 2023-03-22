@@ -9,7 +9,7 @@ interface TypographyProps {
   className?: string;
   fontFamily?: string;
   fontSize?: string;
-  fontWeight?: string;
+  fontWeight?: number;
   upperCase?: boolean;
   text?: string;
 }
@@ -19,7 +19,7 @@ interface StyledTypographyProps
   color?: string;
   fontFamily?: string;
   fontSize?: string;
-  fontWeight?: string;
+  fontWeight?: number;
 }
 
 const Typography: FC<TypographyProps> = ({

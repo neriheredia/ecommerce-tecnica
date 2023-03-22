@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import { Banners, Cart, ImageWithSizes, SearchInput } from '@/components';
+import { Banners, Cart, ImageWithSizes, Input } from '@/components';
 import { FlexDiv, Typography } from '@/style';
 import { toUpperCaseString } from '@/utilities';
 
@@ -84,7 +84,7 @@ const StyledContentRoutesAndCart = styled(FlexDiv)`
   padding: 12px 50px;
 `;
 
-const StyledSearchInput = styled(SearchInput)`
+const StyledSearchInput = styled(Input)`
   width: 250px;
 `;
 

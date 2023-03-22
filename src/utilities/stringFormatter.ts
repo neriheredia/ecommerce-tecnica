@@ -5,3 +5,9 @@ export const toUpperCaseString = (str: string) => {
 
   return formatted;
 };
+
+export const toCapitalize = (str: string) => {
+  const firstLetter = str.slice(0, 1).toUpperCase();
+
+  return `${firstLetter}${str.slice(1)}`;
+};
