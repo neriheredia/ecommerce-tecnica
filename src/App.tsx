@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { Home } from '@/pages';
+import { Product } from '@/pages';
 
 const App: FC = () => {
-  return <Home />;
+  return <Product />;
 };
 
 export default App;

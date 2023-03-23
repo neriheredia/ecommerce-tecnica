@@ -9,3 +9,4 @@ export * from './input';
 export * from './linklist';
 export * from './navbar/constants';
 export * from './navbar';
+export * from './productcard';

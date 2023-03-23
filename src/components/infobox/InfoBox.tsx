@@ -9,9 +9,11 @@ const InfoBox: FC<InfoBoxProps> = ({ description, title, upperDesc, upperTitle }
     <StyledContainerInfoBox flexDirection="column">
       <StyledTitle>{upperTitle ? toUpperCaseString(title) : title}</StyledTitle>
       <StyledHorizontalRule />
-      <StyledDescription>
-        {upperDesc ? toUpperCaseString(description) : description}
-      </StyledDescription>
+      {description && (
+        <StyledDescription>
+          {upperDesc ? toUpperCaseString(description) : description}
+        </StyledDescription>
+      )}
     </StyledContainerInfoBox>
   );
 };
@@ -21,7 +23,6 @@ const StyledContainerInfoBox = styled(FlexDiv)`
 `;
 
 const StyledDescription = styled.p`
-  /* color: #87898c; */
   color: #898990;
   font-family: sans-serif;
   font-size: 14px;

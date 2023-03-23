@@ -26,6 +26,10 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 0,
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
-    'import/extensions': ['error', 'never', { json: 'always', svg: 'always', png: 'always' }],
+    'import/extensions': [
+      'error',
+      'never',
+      { json: 'always', svg: 'always', png: 'always', jpg: 'always' },
+    ],
   },
 };
