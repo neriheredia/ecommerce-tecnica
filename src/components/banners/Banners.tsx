@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FlexDiv } from '@/style';
@@ -6,7 +6,7 @@ import { BannerProps } from '@/interface';
 import { toUpperCaseString } from '@/utilities';
 
 interface BannerContainerProps
-  extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   backgroundColor?: string;
   height?: string;
   textsize?: string;
