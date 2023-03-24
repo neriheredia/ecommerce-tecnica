@@ -57,7 +57,7 @@ const NavBar: FC = () => {
 };
 
 const NavBarContainer = styled(FlexDiv)`
-  border-bottom: 1px solid #87898c;
+  border-bottom: 1px solid #cbcbcb;
 `;
 
 const StyledBanner = styled(Banners)`

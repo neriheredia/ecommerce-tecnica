@@ -26,6 +26,8 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 0,
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'no-param-reassign': ['error', { props: false }],
+    'react/no-array-index-key': 'off',
     'import/extensions': [
       'error',
       'never',

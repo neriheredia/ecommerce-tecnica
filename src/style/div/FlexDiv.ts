@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 interface PropsFlexDiv {
   alignItems?: string;
-  flex?: string;
+  flex?: number;
   flexDirection?: string;
   justifyContent?: string;
   flexWrap?: string;

@@ -1,13 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FlexDiv, Typography } from '@/style';
-import { Banners, CompnayInfo, Footer, InfoBox, NavBar, ProductCard } from '@/components';
+import { useDispatch, useSelector } from 'react-redux';
+import { FlexDiv } from '@/style';
+import {
+  Banners,
+  CompnayInfo,
+  Footer,
+  InfoBox,
+  NavBar,
+  ProductCard,
+  ProductDetail,
+} from '@/components';
 import { TEXT } from '@/constants';
-import zapa from '@/assets/1.jpg';
+import { AppStore, ProductWithId } from '@/interface';
+import { addedProductDetail } from '@/redux';
 
 const { DETAIL_PRODUCT, TECNOLOGIES } = TEXT;
 
 const Product = () => {
+  const dispatch = useDispatch();
+  const { products } = useSelector((state: AppStore) => state.products);
+
+  const handleClickDetail = (product: ProductWithId) => {
+    dispatch(addedProductDetail(product));
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <FlexDiv flexDirection="column">
       <Banners
@@ -17,73 +38,45 @@ const Product = () => {
         textsize="20px"
       />
       <NavBar />
+      <ProductDetail />
       <InfoBox description={DETAIL_PRODUCT.description} title={DETAIL_PRODUCT.title} upperTitle />
       <InfoBox description={TECNOLOGIES.description} title={TECNOLOGIES.title} upperTitle />
       <StyledText>COMPLETA TU LOOK</StyledText>
       <StyledSlider alignItems="center" justifyContent="space-between">
-        <ProductCard
-          images={[{ name: 'newimage', thumbnail: zapa }]}
-          isBtn
-          lineBottom={false}
-          price={5000}
-          src={zapa}
-          title="zapatillas de el carlos"
-        />
-        <ProductCard
-          images={[{ name: 'newimage', thumbnail: zapa }]}
-          isBtn
-          lineBottom={false}
-          price={5000}
-          src={zapa}
-          title="zapatillas de el carlos"
-        />
-        <ProductCard
-          images={[{ name: 'newimage', thumbnail: zapa }]}
-          isBtn
-          lineBottom={false}
-          price={5000}
-          src={zapa}
-          title="zapatillas de el carlos"
-        />
-        <ProductCard
-          images={[{ name: 'newimage', thumbnail: zapa }]}
-          isBtn
-          lineBottom={false}
-          price={5000}
-          src={zapa}
-          title="zapatillas de el carlos"
-        />
+        {products &&
+          products
+            .slice(-4)
+            .map((product: ProductWithId) => (
+              <ProductCard
+                key={product.id}
+                images={product?.images}
+                isBtn
+                lineBottom={false}
+                onDetail={() => handleClickDetail(product)}
+                price={product.price}
+                product={product}
+                src={product.src}
+                title={product.name}
+              />
+            ))}
       </StyledSlider>
       <InfoBox title="productos recomendados" upperTitle />
       <StyledSlider alignItems="center" justifyContent="space-between">
-        <ProductCard
-          images={[{ name: 'newimage', thumbnail: zapa }]}
-          lineBottom
-          price={5000}
-          src={zapa}
-          title="zapatillas de el carlos"
-        />
-        <ProductCard
-          images={[{ name: 'newimage', thumbnail: zapa }]}
-          lineBottom
-          price={5000}
-          src={zapa}
-          title="zapatillas de el carlos"
-        />
-        <ProductCard
-          images={[{ name: 'newimage', thumbnail: zapa }]}
-          lineBottom
-          price={5000}
-          src={zapa}
-          title="zapatillas de el carlos"
-        />
-        <ProductCard
-          images={[{ name: 'newimage', thumbnail: zapa }]}
-          lineBottom
-          price={5000}
-          src={zapa}
-          title="zapatillas de el carlos"
-        />
+        {products &&
+          products
+            .slice(0, 4)
+            .map((product: ProductWithId) => (
+              <ProductCard
+                key={product.id}
+                images={product?.images}
+                lineBottom
+                onDetail={() => handleClickDetail(product)}
+                price={product.price}
+                product={product}
+                src={product.src}
+                title={product.name}
+              />
+            ))}
       </StyledSlider>
       <CompnayInfo />
       <Footer />
