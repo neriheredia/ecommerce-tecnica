@@ -1,0 +1,23 @@
+1: Esquema lógico y arquitectura de software:
+
+Para solucionar este proyecto, se puede utilizar una arquitectura basada en microservicios, en la cual cada aplicación para usuarios y conductores se maneje como un microservicio independiente. 
+
+Para la base de datos se puede utilizar MongoDB, ya que es una base de datos NoSQL flexible y escalable, adecuada para manejar grandes cantidades de datos.
+
+Para la implementación del backend, se puede utilizar Node.js, que es un lenguaje de programación ligero y de alto rendimiento, que se integra bien con MongoDB.
+
+Además, se puede utilizar el framework Apollo GraphQL para la implementación de la API, ya que permite definir de forma clara y sencilla el esquema de la API y manejar consultas complejas y relaciones entre los datos.
+
+Para la autenticación y autorización de los usuarios se puede utilizar JSON Web Tokens (JWT), ya que es una forma segura y eficiente de manejar la autenticación y autorización de los usuarios.
+
+Para la geolocalización se puede utilizar una API de mapas como Google Maps, y para el seguimiento en tiempo real se puede utilizar una tecnología como WebSockets para la comunicación en tiempo real entre los usuarios y conductores.Se podría implementar subscriptions para que los clientes que se han suscrito a un determinado evento, como puede ser la actualización de la ubicación de un conductor, reciban notificaciones en tiempo real a medida que se producen los cambios en el servidor. Esto permite que los clientes puedan estar sincronizados con los datos del servidor sin necesidad de realizar consultas repetitivas
+
+2: Evitando problemas de doble asignación:
+
+Utilizando transacciones en la base de datos, cuando un usuario solicita un servicio, se puede crear una transacción en la base de datos para asegurarse de que solo un conductor pueda aceptar ese servicio. Si dos conductores intentan aceptar el servicio al mismo tiempo, la transacción se bloqueará hasta que el primer conductor confirme la aceptación del servicio y se actualice la base de datos.
+
+De esta manera, se garantiza que solo un conductor pueda aceptar el servicio y se evita la doble asignación. El uso de transacciones en la base de datos es una solución confiable y escalable para prevenir problemas de concurrencia en sistemas con alta carga de peticiones.
+
+3: Mostrando el estado inactivo en el módulo web de ubicaciones:
+
+Para mostrar el estado inactivo en el módulo web de ubicaciones, se puede utilizar una técnica de timeout en la que se establece un tiempo de inactividad máximo permitido para los conductores. Si un conductor no emite coordenadas después de ese tiempo, se marca como inactivo y se muestra el icono correspondiente en el mapa. Esto se puede implementar utilizando un temporizador en el servidor que verifique regularmente la última emisión de coordenadas de cada conductor y actualice su estado en la base de datos.
