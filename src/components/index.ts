@@ -1,5 +1,6 @@
 export * from './banners';
 export * from './cart';
+export * from './cartbutton';
 export * from './company';
 export * from './footer';
 export * from './iconlink';
@@ -10,3 +11,4 @@ export * from './linklist';
 export * from './navbar/constants';
 export * from './navbar';
 export * from './productcard';
+export * from './productdetail';

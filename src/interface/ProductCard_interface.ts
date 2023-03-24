@@ -1,8 +1,10 @@
+import { ProductWithId } from './Product_interface';
+
 export interface ProductCardProps {
-  images?: { name: string; thumbnail: string }[];
+  images?: ProductWithId[];
   isBtn?: boolean;
   lineBottom: boolean;
-  onClick?: () => void;
+  onDetail?: () => void;
   price: number;
   src: string;
   title: string;

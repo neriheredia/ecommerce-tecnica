@@ -20,6 +20,8 @@ const CompnayInfo = () => {
 
 const StyledContainerCompanyInfo = styled(FlexDiv)`
   background-color: #e8e8e8;
+  margin-top: 15px;
+  padding: 20px;
   width: 100%;
 `;
 

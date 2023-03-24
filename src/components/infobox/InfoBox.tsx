@@ -30,7 +30,10 @@ const StyledDescription = styled.p`
   letter-spacing: 1px;
 `;
 
-const StyledHorizontalRule = styled.hr``;
+const StyledHorizontalRule = styled.hr`
+  border-top: none;
+  border-color: #cbcbcb;
+`;
 
 const StyledTitle = styled.h3`
   color: #6d6765;
