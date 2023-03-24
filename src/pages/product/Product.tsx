@@ -55,7 +55,7 @@ const Product = () => {
                 onDetail={() => handleClickDetail(product)}
                 price={product.price}
                 product={product}
-                src={`/src/assets/${product.src}`}
+                src={`./src/assets/${product.src}`}
                 title={product.name}
               />
             ))}
@@ -73,7 +73,7 @@ const Product = () => {
                 onDetail={() => handleClickDetail(product)}
                 price={product.price}
                 product={product}
-                src={`/src/assets/${product.src}`}
+                src={`./src/assets/${product.src}`}
                 title={product.name}
               />
             ))}

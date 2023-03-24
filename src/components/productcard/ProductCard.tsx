@@ -36,7 +36,7 @@ const ProductCard: FC<ProductCardProps> = ({
               <ImageWithSizes
                 height="40px"
                 key={name + index + 1}
-                src={`/src/assets/${subSrc}`}
+                src={`./src/assets/${subSrc}`}
                 width="40px"
               />
             ))}

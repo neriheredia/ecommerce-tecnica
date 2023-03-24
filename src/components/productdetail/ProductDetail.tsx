@@ -40,7 +40,7 @@ const ProductDetail = () => {
   return (
     <StyledProductDetailContainer>
       <StyledContent alignItems="center" flex={2} flexDirection="column" justifyContent="center">
-        <ImageWithSizes height="600px" src={`/src/assets/${productDetail.src}`} width="100%" />
+        <ImageWithSizes height="600px" src={`./src/assets/${productDetail.src}`} width="100%" />
         <StyleHr />
         <StyledContentImages>
           {productDetail.images &&
@@ -50,7 +50,7 @@ const ProductDetail = () => {
                 <ImageWithSizes
                   height="90px"
                   key={id}
-                  src={`/src/assets/${thumbnail}`}
+                  src={`./src/assets/${thumbnail}`}
                   width="20%"
                 />
               ))}
@@ -72,7 +72,7 @@ const ProductDetail = () => {
         <StyledColor flexDirection="column">
           <Typography color="#adadad" fontSize="20px" text="color" upperCase />
           <StyledContentColor>
-            <ImageWithSizes height="100%" src={`/src/assets/${productDetail.src}`} width="100%" />
+            <ImageWithSizes height="100%" src={`./src/assets/${productDetail.src}`} width="100%" />
           </StyledContentColor>
         </StyledColor>
         <FlexDiv flexDirection="column">
