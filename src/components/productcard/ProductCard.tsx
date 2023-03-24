@@ -33,12 +33,7 @@ const ProductCard: FC<ProductCardProps> = ({
           images
             .slice(-3)
             .map(({ name, src: subSrc }: ProductWithId, index) => (
-              <ImageWithSizes
-                height="40px"
-                key={name + index + 1}
-                src={`./src/assets/${subSrc}`}
-                width="40px"
-              />
+              <ImageWithSizes height="40px" key={name + index + 1} src={subSrc} width="40px" />
             ))}
       </StyledContentImages>
       <StyledName

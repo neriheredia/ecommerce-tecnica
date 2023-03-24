@@ -9,19 +9,7 @@ import { ImageWithSizes } from '../imagewithsizes';
 import { CardButton } from '../cartbutton';
 import { AppStore, ProductWithId } from '@/interface';
 import { addedProductDetail } from '@/redux';
-
-const talla = [
-  { key: 1, size: 5 },
-  { key: 2, size: 5.5 },
-  { key: 3, size: 6 },
-  { key: 4, size: 6.5 },
-  { key: 5, size: 7 },
-  { key: 6, size: 7.5 },
-  { key: 7, size: 8 },
-  { key: 8, size: 8.5 },
-  { key: 9, size: 9 },
-  { key: 10, size: 9.5 },
-];
+import { sizes } from '@/constants';
 
 const ProductDetail = () => {
   const dispatch = useDispatch();
@@ -40,19 +28,14 @@ const ProductDetail = () => {
   return (
     <StyledProductDetailContainer>
       <StyledContent alignItems="center" flex={2} flexDirection="column" justifyContent="center">
-        <ImageWithSizes height="600px" src={`./src/assets/${productDetail.src}`} width="100%" />
+        <ImageWithSizes height="600px" src={productDetail.src} width="100%" />
         <StyleHr />
         <StyledContentImages>
           {productDetail.images &&
             productDetail.images
               .slice(-5)
               .map(({ id, src: thumbnail }: ProductWithId) => (
-                <ImageWithSizes
-                  height="90px"
-                  key={id}
-                  src={`./src/assets/${thumbnail}`}
-                  width="20%"
-                />
+                <ImageWithSizes height="90px" key={id} src={thumbnail} width="20%" />
               ))}
         </StyledContentImages>
       </StyledContent>
@@ -72,13 +55,13 @@ const ProductDetail = () => {
         <StyledColor flexDirection="column">
           <Typography color="#adadad" fontSize="20px" text="color" upperCase />
           <StyledContentColor>
-            <ImageWithSizes height="100%" src={`./src/assets/${productDetail.src}`} width="100%" />
+            <ImageWithSizes height="100%" src={productDetail.src} width="100%" />
           </StyledContentColor>
         </StyledColor>
         <FlexDiv flexDirection="column">
           <StyledSizeText color="#adadad" fontSize="20px" text="talla" upperCase />
           <StyledSize>
-            {talla.map(({ key, size }) => (
+            {sizes.map(({ key, size }) => (
               <StyleSquare alignItems="center" key={key} justifyContent="center">
                 {size}
               </StyleSquare>
