@@ -54,6 +54,7 @@ const Product = () => {
                 lineBottom={false}
                 onDetail={() => handleClickDetail(product)}
                 price={product.price}
+                product={product}
                 src={`/src/assets/${product.src}`}
                 title={product.name}
               />
@@ -71,6 +72,7 @@ const Product = () => {
                 lineBottom
                 onDetail={() => handleClickDetail(product)}
                 price={product.price}
+                product={product}
                 src={`/src/assets/${product.src}`}
                 title={product.name}
               />

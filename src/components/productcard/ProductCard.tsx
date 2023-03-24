@@ -16,6 +16,7 @@ const ProductCard: FC<ProductCardProps> = ({
   lineBottom,
   onDetail,
   price,
+  product,
   src,
   title,
 }: ProductCardProps) => {
@@ -50,7 +51,7 @@ const ProductCard: FC<ProductCardProps> = ({
       <StyledPrice color="#734656" fontWeight={500} fontSize="20px">
         ${price}.00
       </StyledPrice>
-      {isBtn && <CardButton product={{ images, price, src, title }} />}
+      {isBtn && <CardButton product={product} />}
     </StyledProductCardContainer>
   );
 };

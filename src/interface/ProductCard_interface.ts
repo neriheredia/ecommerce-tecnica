@@ -6,6 +6,7 @@ export interface ProductCardProps {
   lineBottom: boolean;
   onDetail?: () => void;
   price: number;
+  product: ProductWithId;
   src: string;
   title: string;
 }
